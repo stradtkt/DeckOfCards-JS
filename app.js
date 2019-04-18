@@ -28,5 +28,17 @@ class Deck {
             }
         }
     }
-    
+    shuffle() {
+        let index = this.deck.length, temp_val, random_idx;
+        while(0 != index) {
+            random_idx = Math.floor(Math.random() * index);
+            index -= 1;
+            temp_val = this.deck[index];
+            this.dexk[index] = this.deck[random_idx];
+            this.deck[random_idx] = temp_val;
+        }
+    }
+    deal() {
+        
+    }
 }
