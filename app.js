@@ -39,6 +39,18 @@ class Deck {
         }
     }
     deal() {
-        
+        let card = this.deck.shift();
+        this.dealt_cards.push(card);
+        return card;
     }
-}
+    replace() {
+        this.deck.unshift(this.dealt_cards.shift())
+    }
+    clear_deck() {
+        this.deck = []
+    }
+};
+deck = new Deck()
+deck.generate_deck()
+deck.shuffle()
+console.log(deck.deal())
